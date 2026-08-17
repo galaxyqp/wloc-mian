@@ -13,7 +13,7 @@ const app = new Hono();
 app.get("/wloc.js", async (c) => {
   try {
     const response = await fetch(
-      "https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/dist/wloc.js"
+      "https://raw.githubusercontent.com/galaxyqp/wloc-mian/blob/main/dist/wloc.js"
     );
 
     if (!response.ok) {
@@ -40,7 +40,7 @@ app.get("/wloc.js", async (c) => {
 app.get("/wloc-settings.js", async (c) => {
   try {
     const response = await fetch(
-      "https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/dist/wloc-settings.js"
+      "https://raw.githubusercontent.com/galaxyqp/wloc-mian/blob/main/dist/wloc-settings.js"
     );
 
     if (!response.ok) {
