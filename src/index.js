@@ -1,8 +1,23 @@
 import { Hono } from "hono/tiny";
 import { getPageHtml } from "./page.js";
 import { parseCoords, gcj02ToWgs84, toWgs84, round6, inRange } from "./parse.js";
+import wlocJS from "./wloc.js";
+import wlocSettingsJS from "./wloc-settings.js";
 
 const app = new Hono();
+
+app.get("/wloc.js", (c) => {
+  return c.text(wlocJS, 200, {
+    "Content-Type": "application/javascript;charset=UTF-8"
+  });
+});
+
+
+app.get("/wloc-settings.js", (c) => {
+  return c.text(wlocSettingsJS, 200, {
+    "Content-Type": "application/javascript;charset=UTF-8"
+  });
+});
 
 
 // ===============================
