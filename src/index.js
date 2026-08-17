@@ -3,7 +3,7 @@ import { getPageHtml } from "./page.js";
 import { parseCoords, gcj02ToWgs84, toWgs84, round6, inRange } from "./parse.js";
 import wlocJS from "./wloc.js";
 import wlocSettingsJS from "./wloc-settings.js";
-import wlocModule from "./wloc.module";
+import wlocModule from "./wlocModule.js";
 
 
 
