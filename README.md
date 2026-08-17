@@ -70,9 +70,9 @@ https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/modules/wloc.modul
 
 **不放心可自行部署：** worker 源码完全开源，可自己部署一份替换上面的地址：
 
-- 路由：[`worker/src/index.js`](worker/src/index.js)
-- 链接解析与坐标换算：[`worker/src/parse.js`](worker/src/parse.js)
-- 选点页面：[`worker/src/page.js`](worker/src/page.js)、[`worker/src/gcj-browser.js`](worker/src/gcj-browser.js)
+- 路由：[`src/index.js`](src/index.js)
+- 链接解析与坐标换算：[`src/parse.js`](src/parse.js)
+- 选点页面：[`src/page.js`](src/page.js)、[`src/gcj-browser.js`](src/gcj-browser.js)
 - 部署后把快捷指令里的 `wloc-spoofer.wloc.workers.dev` 换成你自己的 worker 域名即可。
 
 解析逻辑带一套不联网的回归测试，改动后跑一下：
