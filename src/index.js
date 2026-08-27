@@ -4,6 +4,45 @@ import { parseCoords, gcj02ToWgs84, toWgs84, round6, inRange } from "./parse.js"
 
 const app = new Hono();
 
+
+app.get("/wloc.js", async (c)=>{
+
+  const res = await fetch(
+    "https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/dist/wloc.js"
+  );
+
+  const text = await res.text();
+
+  c.header(
+    "Content-Type",
+    "application/javascript"
+  );
+
+  return c.text(text);
+
+});
+
+
+app.get("/wloc-settings.js", async (c)=>{
+
+  const res = await fetch(
+    "https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/dist/wloc-settings.js"
+  );
+
+  const text = await res.text();
+
+  c.header(
+    "Content-Type",
+    "application/javascript"
+  );
+
+  return c.text(text);
+
+});
+
+
+
+
 app.get("/", (c) => {
   return c.html(getPageHtml());
 });
